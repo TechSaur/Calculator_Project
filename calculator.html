@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Simple Calculator Using JS </title>
+</head>
+<body>
+	<h1> Simple Calculator </h1>
+	<input type="number" name="name" id="first">
+	<select id=sel>
+		<option>+</option>
+		<option>-</option>
+		<option>x</option>
+		<option>/</option>
+	</select>
+	<input type="number" name="name" id="second">
+	<br>
+	<br>
+	<button onclick="cal()"> Calculate </button>
+	<input type="" name="" readonly="" id="res">
+</body>
+<script type="text/javascript">
+	function cal(){
+		var fir = document.getElementById('first').value;
+		var sec = document.getElementById('second').value;
+		var oper = document.getElementById('sel').value
+		if (oper == '+') {
+			var final = parseInt(fir) + parseInt(sec); 
+		}
+		if (oper == '-') {
+			var final = parseInt(fir) - parseInt(sec); 
+		}
+		if (oper == '*') {
+			var final = parseInt(fir) * parseInt(sec); 
+		}
+		if (oper == '/') {
+			var final = parseInt(fir) / parseInt(sec); 
+		}
+		document.getElementById('res').value = final
+	}
+</script>
+</html>
